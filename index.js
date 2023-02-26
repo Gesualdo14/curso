@@ -3,7 +3,7 @@ const backendUrl = ["localhost", "127.0.0.1"].includes(window.location.hostname)
   ? "http://localhost:4000"
   : "https://curso-backend.onrender.com"
 
-console.log({ backendUrl })
+console.log({ backendUrl, hostname: window.location.hostname })
 
 submitButton.addEventListener("click", async () => {
   const nameInput = document.querySelector("input[name=name]")
