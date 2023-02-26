@@ -12,10 +12,35 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
     width: 30rem;
     max-width: 80%;
     box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.2);
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+input {
+    padding: 0.5rem 1rem;
+    border: 1px lightgray solid;
+    border-radius: 0.2rem;
+    outline: none;
+}
+
+input::placeholder {
+    color: lightgray
+}
+
+button {
+    padding: 0.5rem;
+    background-color: rgba(9, 109, 201, 1);
+    color: white;
+    border-radius: 0.2rem;
+    margin-top: 1rem;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
