@@ -1,5 +1,8 @@
 const submitButton = document.querySelector("button[type=submit]")
-const backendUrl = process.env.BACKEND_URL || `http://localhost:4000`
+const backendUrl =
+  window.location.hostname === "localhost"
+    ? "http://localhost:4000"
+    : "https://curso-backend.onrender.com"
 
 submitButton.addEventListener("click", async () => {
   const nameInput = document.querySelector("input[name=name]")
