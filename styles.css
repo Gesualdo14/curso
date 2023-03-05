@@ -1,11 +1,24 @@
+*,
+*::after,
+*::before {
+ box-sizing: border-box;
+}
+
+:root {
+    --blue: rgba(9, 109, 201, 1);
+    --red: rgb(201, 9, 9);
+}
+
+html {
+    font-size: 16px;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    box-sizing: border-box;
-    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -21,10 +34,11 @@ body {
 }
 
 input {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     border: 1px lightgray solid;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
     outline: none;
+    font-size: 1rem;
 }
 
 input::placeholder {
@@ -32,15 +46,47 @@ input::placeholder {
 }
 
 button {
-    padding: 0.5rem;
-    background-color: rgba(9, 109, 201, 1);
+    padding: 0.75rem;
+    background-color: var(--blue);
     color: white;
-    border-radius: 0.2rem;
+    border-radius:0.5rem;
     margin-top: 1rem;
     border: none;
+    font-size: 1rem;
 }
 
 button:hover {
     cursor: pointer;
     opacity: 0.8;
+}
+
+#tasks {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+icon {
+    cursor: pointer;
+}
+
+.fa-edit {
+    margin-right: 1rem;
+}
+
+.fa-edit:hover {
+    color: var(--blue)
+}
+.fa-trash:hover {
+    color: var(--red)
 }
