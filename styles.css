@@ -65,6 +65,12 @@ button:hover {
     margin-top: 1rem;
 }
 
+.task-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .task {
     display: flex;
     align-items: center;
@@ -76,17 +82,24 @@ button:hover {
     margin-bottom: 0.5rem;
 }
 
+#icons {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
 icon {
     cursor: pointer;
 }
 
-.fa-edit {
-    margin-right: 1rem;
+.fa-edit, .fa-paperclip {
+    margin-right: 0.75rem;
 }
 
-.fa-edit:hover {
+.fa-edit:hover, .fa-paperclip:hover {
     color: var(--blue)
 }
+
 .fa-trash:hover {
     color: var(--red)
 }
