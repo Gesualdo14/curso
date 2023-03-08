@@ -1,3 +1,4 @@
+// Funciona en LOCAL, pero en producción no se hace el "yarn install"
 import Swal from "./node_modules/sweetalert2/src/sweetalert2.js"
 
 const submitButton = document.querySelector("button[type=submit]")
@@ -98,6 +99,7 @@ async function handleDeleteTask(task) {
 
 async function handleAttach(task) {
   const inputFile = document.getElementById("task-file")
+  // Al abrirse el selector, también empezamos a escuchar el evento "change"
   inputFile.click()
   inputFile.addEventListener("change", async (e) => {
     const file = e.target.files[0]
