@@ -1,4 +1,7 @@
 // Funciona en LOCAL, pero en producción no se hace el "yarn install"
+// no utilizar yarn add para un proyecto tan básico en el que no tenemos
+// un servidor de Node JS, solo archivos estáticos
+// nos conviene consumir la CDN
 import Swal from "./node_modules/sweetalert2/src/sweetalert2.js"
 
 const submitButton = document.querySelector("button[type=submit]")
