@@ -2,12 +2,16 @@
 // no utilizar yarn add para un proyecto tan básico en el que no tenemos
 // un servidor de Node JS, solo archivos estáticos
 // nos conviene consumir la CDN
-import Swal from "./node_modules/sweetalert2/src/sweetalert2.js"
+// import Swal from "./node_modules/sweetalert2/src/sweetalert2.js"
 
 const submitButton = document.querySelector("button[type=submit]")
-const backendUrl = ["localhost", "127.0.0.1"].includes(window.location.hostname)
+const isDev = ["localhost", "127.0.0.1"].includes(window.location.hostname)
+const backendUrl = isDev
+  ? "http://localhost:4000/api"
+  : "https://curso-backend.onrender.com/api"
+const frontendUrl = isDev
   ? "http://localhost:4000"
-  : "https://curso-backend.onrender.com"
+  : "https://curso-mu.vercel.app"
 const tasksDIV = document.getElementById("tasks")
 
 // console.log({
